@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import Products from "../pages/Products";
 
 const Navbar = ({ setTheme }) => {
   const [isChecked, setIsChecked] = useState(
@@ -39,7 +40,7 @@ const Navbar = ({ setTheme }) => {
                 <Link to={"/about"}>About</Link>
               </li>
               <li>
-                <a>Parent</a>
+                <Link>Product</Link>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -69,7 +70,10 @@ const Navbar = ({ setTheme }) => {
             </li>
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>
+                  {" "}
+                  <Link to={"/Products"}>Product</Link>
+                </summary>
                 <ul className="p-2 z-10">
                   <li>
                     <a>Submenu 1</a>

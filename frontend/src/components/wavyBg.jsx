@@ -9,7 +9,7 @@ export const WavyBackground = ({
   containerClassName,
   colors,
   waveWidth,
-  backgroundFill,
+
   blur = 10,
   speed = "fast",
   waveOpacity = 0.5,
@@ -68,7 +68,8 @@ export const WavyBackground = ({
 
   let animationId;
   const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
+    const localTheme = localStorage.getItem("theme");
+    ctx.fillStyle = localTheme == "black" ? "black" : "white";
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
     drawWave(5);

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
+import Products from "./pages/Products";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -29,6 +30,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
